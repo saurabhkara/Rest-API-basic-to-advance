@@ -1,0 +1,40 @@
+-----------------------------------------------------------------------------------
+- Register a user
+      Validate the request
+      Authorize the request
+      check if user is in the database already
+      prepare model
+      store in database
+      generate jwt token
+      send response
+
+-----------------------------------------------------------------------------------
+- Login a user
+      Validate the users credential
+      Check user is in database
+      Compare the password
+      Generate Token
+
+-----------------------------------------------------------------------------------
+- Who am I
+      Applying middleware on router level
+      getting token from header of request
+      verifying token and extracting id and role of user
+      getting user's detail from DB 
+
+-----------------------------------------------------------------------------------
+
+-Refresh Token
+
+
+
+-----------------------------------------------------------------------------------
+
+-Logout
+
+-----------------------------------------------------------------------------------
+- Add new Product
+- Update a Product
+- Get all Products
+- Get Single Products
+- Delete a Product
