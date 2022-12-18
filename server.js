@@ -28,6 +28,7 @@ app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use('/api/',router);
 app.use(errorHandler);
+app.use('/uploads',express.static('uploads'))
 
 app.listen(APP_PORT,()=>{
     console.log(`Server is running at ${APP_PORT}`);
