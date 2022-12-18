@@ -3,7 +3,7 @@ import { APP_PORT,DB_URL } from './config';
 import router from './routes';
 import errorHandler from './middlewares/errorHandlers';
 import mongoose from 'mongoose';
-
+import path from 'path';
 
 
 const app = express();
@@ -22,12 +22,13 @@ db.once("open", function () {
   console.log("DB Connected successfully");
 });
 
+global.appRoot = path.resolve(__dirname);
 
-
+app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use('/api/',router);
 app.use(errorHandler);
 
 app.listen(APP_PORT,()=>{
-    console.log(`Server is running at ${APP_PORT}`)
+    console.log(`Server is running at ${APP_PORT}`);
 })
